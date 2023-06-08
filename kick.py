@@ -130,16 +130,14 @@ class KICK(Plugin):
                 )
              
             command = [executable_filepath, api_url]            
-            process = subprocess.Popen(command,  cwd=filepath, stdout=subprocess.PIPE, stderr=subprocess.PIPE,text=True)
-
-            stdout, stderr = process.communicate() 
+            result = subprocess.run(command,  cwd=filepath, stdout=subprocess.PIPE, stderr=subprocess.PIPE,text=True)
+            
             
             url, self.id, self.author, self.title, self.category = (
                 _LIVE_SCHEMA if live else (_VIDEO_SCHEMA if vod else _CLIP_SCHEMA)
-            ).validate(stdout)
+            ).validate(result.stdout)
 
         except (PluginError, TypeError) as err:
-            print(err)
             log.debug(err)
             return
           
