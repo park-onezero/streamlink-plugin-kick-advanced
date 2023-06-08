@@ -9,6 +9,7 @@ streamlink --plugin-dirs .\streamlink-plugin-kick-advanced-master https://kick.c
 
 ## 리눅스 사용자 확인 사항
 curl 플러그인 설치(--insecure 옵션 추가해놓아서 선택사항)
+
 리눅스는 chmod를 통해 파일 권한을 수정해주셔야 합니다 
 ```bash
 sudo apt install libnss3 nss-plugin-pem ca-certificates
