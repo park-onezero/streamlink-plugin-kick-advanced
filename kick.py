@@ -129,7 +129,7 @@ class KICK(Plugin):
                     )
                 )
              
-            command = [executable_filepath, api_url]            
+            command = [executable_filepath, api_url, '--insecure']            
             result = subprocess.run(command,  cwd=filepath, stdout=subprocess.PIPE, stderr=subprocess.PIPE,text=True)
             
             
