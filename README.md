@@ -14,7 +14,7 @@ chmod +x ./streamlink-plugin-kick-advanced-master/linux/*
 ```
 
 ## 오라클 클라우드 사용자 확인 사항
-오라클은 arch64 아키텍쳐 기반이므로 executable 파일을 교체해줍니다
+오라클은 aarch64 아키텍쳐 기반이므로 executable 파일을 교체해줍니다
 ```bash
 cd ./streamlink-plugin-kick-advanced-master
 rm -rf ./linux
